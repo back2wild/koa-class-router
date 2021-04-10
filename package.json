@@ -4,6 +4,8 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
+    "login": "npm login --registry=https://registry.npmjs.org/",
+    "pub": "npm run build && npm publish --registry=https://registry.npmjs.org/ --access public",
     "build": "rm -Rf dist && tsc --project ."
   },
   "repository": {
