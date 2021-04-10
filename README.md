@@ -1,6 +1,12 @@
 # @back2wild/koa-class-router
 
-> A typescript class decorator based router for koajs
+A typescript class decorator based router for koajs
+
+## Usage
+
+```bash
+npm install --save @back2wild/koa-class-router
+```
 
 ## Example
 
@@ -13,10 +19,10 @@ class User extends KCRRoutes {
     method: 'POST',
   })
   public async login(ctx: Koa.Context) {
+    ctx.response.type = 'application/json';
     ctx.response.body = {
       message: 'OK'
     };
-    ctx.response.type = 'application/json';
   }
 }
 
